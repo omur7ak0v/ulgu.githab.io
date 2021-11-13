@@ -1,0 +1,994 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #095f72;
+}
+
+/* header start */
+.header {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background: rgb(10, 94, 163);
+    justify-content: center;
+}
+
+.container_header {
+    display: flex;
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.container_header a {
+    text-decoration: none;
+}
+
+.burger {
+    color: white;
+    font-size: 35px;
+    transition: linear .3s;
+}
+
+.burger:hover {
+    color: yellow;
+    cursor: pointer;
+    transition: linear .3s;
+}
+
+.close {
+    color: rgb(221, 1, 1);
+    font-size: 35px;
+    transition: linear .1s;
+    display: none;
+}
+
+.close:hover {
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    transition: linear .1s;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+
+}
+
+.home .h_icon {
+    color: white;
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.home .title_name {
+    color: white;
+    font-size: 35px;
+    transition: linear .3s;
+}
+
+.m_icon .burger {
+    display: none;
+}
+
+.m_icon .close {
+    display: block;
+}
+
+/* to override the existing css for "a" tag */
+#sub-header .active a {
+    color: #fff;
+}
+
+/* /header end */
+
+
+
+.go {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* tab start */
+
+/* 1 */
+
+.all_tab {
+    margin-top: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: linear 0.3s;
+    z-index: 999;
+}
+
+.abs .all_tab {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+
+    margin-top: 50px;
+    visibility: visible;
+    opacity: 1;
+    transition: linear 0.3s;
+}
+
+
+.tab_active .all_tab {
+    margin-top: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: linear 0.3s;
+    z-index: 999;
+}
+
+/* /1 */
+/* 2 */
+.all_tab2 {
+    position: absolute;
+    top: -100px;
+
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: linear 0.3s;
+    z-index: 999;
+}
+
+.slide_baek .all_tab2 {
+
+    display: flex;
+    width: 100%;
+    top: 150px;
+
+    flex-direction: column;
+    overflow: hidden;
+    visibility: visible;
+    opacity: 1;
+    transition: linear 0.3s;
+
+}
+
+.tab .text_slide img {
+    width: 190px;
+    height: 90px;
+}
+
+.tab_active2 .all_tab2 {
+    margin-top: 0px;
+    position: absolute;
+    top: 90px;
+
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: linear 0.3s;
+    z-index: 999;
+
+}
+
+.func {
+    display: flex;
+    width: 100%;
+
+}
+
+/* /2 */
+
+.tab {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab .namber {
+    display: flex;
+    width: 90px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #ffc400;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+.tab .edit_tab {
+    display: flex;
+    width: 40px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #33FF00;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+.tab .et {
+    color: #ffc400;
+}
+
+.tab .namber_slide,
+.edit_tab_slide,
+.delete_tab_slide {
+    display: flex;
+    width: 40px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+.tab .namber_slide_title,
+.edit_tab_slide_title,
+.delete_tab_slide_title {
+    display: flex;
+    width: 40px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+.tab .text {
+    display: flex;
+    width: 400px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+
+    border: 1px solid #000000;
+}
+
+.tab .text_slide_title {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #ffc400;
+    font-size: 18px;
+    text-align: center;
+
+    border: 1px solid #000000;
+}
+
+.tab .text_slide {
+    display: flex;
+    width: 300px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+
+    font-size: 18px;
+    text-align: center;
+
+    border: 1px solid #000000;
+}
+
+.tab .text_slide_info_title {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    overflow: hidden;
+
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #ffc400;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+    border: 1px solid #000000;
+}
+
+.tab .text_slide_info {
+    display: flex;
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+
+    border: 1px solid #000000;
+}
+
+.tab .text_slide_date_title {
+    display: flex;
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
+
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #ffc400;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+    border: 1px solid #000000;
+}
+
+.tab .text_slide_date {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+
+    border: 1px solid #000000;
+}
+
+.tab .head {
+    color: #ffc400;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.et {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffc400;
+}
+
+.edit_tab {
+    color: #33FF00;
+}
+
+.edit_tab:hover {
+    color: #2edb03;
+    cursor: pointer;
+}
+
+.delete_tab {
+    color: #dd0505;
+}
+
+.delete_tab:hover {
+    color: #ad1212;
+    cursor: pointer;
+}
+
+/* slide ed */
+.edit_tab_slide {
+    color: #33FF00;
+}
+
+.edit_tab_slide :hover {
+    color: #2edb03;
+    cursor: pointer;
+}
+
+.delete_tab_slide {
+    color: #dd0505;
+}
+
+.delete_tab_slide :hover {
+    color: #ad1212;
+    cursor: pointer;
+}
+
+/* /skide ed */
+
+/* tab end */
+
+/* form start */
+.form {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    margin-top: 150px;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: linear 0.3s;
+    z-index: 999;
+}
+
+.tab_active .form {
+
+    position: absolute;
+    margin-top: 10px;
+    visibility: visible;
+    opacity: 1;
+    transition: linear 0.3s;
+    z-index: 999;
+}
+
+.form h1 {
+    margin-bottom: 15px;
+    color: white;
+
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    display: flex;
+    width: 250px;
+    height: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #5eff00;
+    border-radius: 5px;
+}
+
+.knop {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form .btn {
+
+    /* margin: 20px 10px; */
+    display: inline-block;
+    vertical-align: top;
+    padding: 7px 30px;
+
+    transform: skewX(-15deg);
+    background: none;
+
+    border: 0;
+    cursor: pointer;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .5s;
+
+
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* left */
+.form .btn--redl {
+    font-weight: bold;
+    border: 2px solid #dd0000;
+    transition: linear .3s;
+}
+
+.form .btn--redr {
+    font-weight: bold;
+    border: 2px solid #13e001;
+}
+
+.form .btn--redl:hover {
+    color: #ffffff;
+    background-color: #ff0000;
+    border: 2px solid #ffffff;
+    transition: linear .3s;
+}
+
+/* /left */
+
+/* right */
+
+.form .btn--redr {
+    font-weight: bold;
+    border: 2px solid #13e001;
+    transition: linear .3s;
+}
+
+.form .btn--redr:hover {
+    color: #ffffff;
+    background-color: #13e001;
+    border: 2px solid #ffffff;
+    transition: linear .3s;
+}
+
+/* /right */
+
+/* form2 start */
+.form2 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tab_active2 .form2 {
+    /* position: absolute; */
+    top: -100px;
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition: linear 0.3s;
+    z-index: 999;
+}
+
+.form2 h1 {
+    margin-bottom: 15px;
+    color: white;
+
+}
+
+.form2 form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form2 input {
+    display: flex;
+    width: 250px;
+    height: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #5eff00;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#news_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    padding: 10px;
+    overflow: hidden;
+    height: 50px;
+}
+
+.knop2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form2 .btn {
+
+    /* margin: 20px 10px; */
+    display: inline-block;
+    vertical-align: top;
+    padding: 7px 30px;
+
+    transform: skewX(-15deg);
+    background: none;
+
+    border: 0;
+    cursor: pointer;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .5s;
+
+
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* left */
+.form2 .btn--redl {
+    font-weight: bold;
+    border: 2px solid #dd0000;
+    transition: linear .3s;
+}
+
+.form2 .btn--redr {
+    font-weight: bold;
+    border: 2px solid #13e001;
+}
+
+.form2 .btn--redl:hover {
+    color: #ffffff;
+    background-color: #ff0000;
+    border: 2px solid #ffffff;
+    transition: linear .3s;
+}
+
+/* /left */
+
+/* right */
+
+.form2 .btn--redr {
+    font-weight: bold;
+    border: 2px solid #13e001;
+    transition: linear .3s;
+}
+
+.form2 .btn--redr:hover {
+    color: #ffffff;
+    background-color: #13e001;
+    border: 2px solid #ffffff;
+    transition: linear .3s;
+}
+
+
+/* edit slide */
+.form_slide_edit {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: fixed;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 90px;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: linear .3s;
+    z-index: 999;
+}
+
+.tab_active2 .form_slide_edit {
+    position: absolute;
+    top: 90px;
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition: linear .3s;
+
+    z-index: 999;
+}
+
+.form_slide_edit h1 {
+    margin-bottom: 15px;
+    color: white;
+
+}
+
+.form_slide_edit form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_slide_edit input {
+    display: flex;
+    width: 250px;
+    height: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #5eff00;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.knop2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_slide_edit .btn {
+
+    /* margin: 20px 10px; */
+    display: inline-block;
+    vertical-align: top;
+    padding: 7px 30px;
+
+    transform: skewX(-15deg);
+    background: none;
+
+    border: 0;
+    cursor: pointer;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .5s;
+
+
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* left */
+.form_slide_edit .btn--redl {
+    font-weight: bold;
+    border: 2px solid #dd0000;
+    transition: linear .3s;
+}
+
+.form_slide_edit .btn--redr {
+    font-weight: bold;
+    border: 2px solid #13e001;
+}
+
+.form_slide_edit .btn--redl:hover {
+    color: #ffffff;
+    background-color: #ff0000;
+    border: 2px solid #ffffff;
+    transition: linear .3s;
+}
+
+/* /left */
+
+/* right */
+
+.form_slide_edit .btn--redr {
+    font-weight: bold;
+    border: 2px solid #13e001;
+    transition: linear .3s;
+}
+
+.form_slide_edit .btn--redr:hover {
+    color: #ffffff;
+    background-color: #13e001;
+    border: 2px solid #ffffff;
+    transition: linear .3s;
+}
+
+/* /edit slide */
+
+/* form end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* menu start */
+
+.all_menu {
+    display: flex;
+}
+
+.menu_blok {
+    position: absolute;
+    display: flex;
+    width: 280px;
+    height: auto;
+    flex-direction: column;
+
+    background: rgb(98, 0, 255);
+    left: -50px;
+    top: 70px;
+
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: linear 0.3s;
+    z-index: 999;
+}
+
+.cm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.m {
+    color: rgb(177, 6, 6);
+    font-size: 35px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.m:hover {
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+}
+
+.menu_blok h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.menu_blok a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 22px;
+    margin-left: 10px;
+    transition: linear .5s;
+    font-weight: 300;
+}
+
+.menu_blok a::after {
+    content: "";
+    width: 0%;
+    left: 0px;
+    height: 2px;
+    background: #f2ff04;
+    display: block;
+    margin: left;
+    transition: 0.5s;
+}
+
+.menu_blok a:hover::after {
+    width: 100%;
+}
+
+.menu_blok a:hover {
+    margin-left: 20px;
+    transition: linear .5s;
+    color: #f2ff04;
+    opacity: 9999;
+}
+
+.all_menu .sary::after {
+    width: 100%;
+}
+
+.all_menu .sary {
+    margin-left: 20px;
+    transition: linear .5s;
+    color: #f2ff04;
+    opacity: 9999;
+}
+
+.blok_r {
+    left: 0px;
+    visibility: visible;
+    opacity: 1;
+    transition: linear 0.3s;
+    position: absolute;
+    z-index: 9999;
+
+}
+
+.menu_blok .active {
+    color: rgb(255, 0, 0);
+}
+
+/* /menu end */
+
+
+/* Адаптаця старт */
+@media screen and (max-width: 600px) {
+    .tab {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .func {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .edit_tab_slide_title {
+        display: none
+    }
+
+    .delete_tab_slide_title {
+        display: none;
+    }
+    .tab .namber_slide{
+        margin-top: 20px;
+    }
+
+    .tab .namber_slide,
+    .edit_tab_slide,
+    .delete_tab_slide {
+        width: 40px;
+        height: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .tab .namber {
+        
+        height: 20px;
+        margin-top: 20px;
+        height: 40px;
+        
+    }
+
+    .tab .text_slide_info_title{
+        display: none;
+    }
+
+    .tab .text_slide_date_title{
+        display: none;
+    }
+
+    .tab .text_slide_date{
+        width: 300px;
+        height: 50px;
+    }
+
+}
+
+/* Адаптация конец */

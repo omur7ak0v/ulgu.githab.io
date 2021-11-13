@@ -1,0 +1,15 @@
+
+
+
+
+
+.all_menu .a1::after {
+    width: 100%;
+}
+
+.menu_blok .a1 {
+    margin-left: 20px;
+    transition: linear .5s;
+    color: #f2ff04;
+    opacity: 9999;
+}
